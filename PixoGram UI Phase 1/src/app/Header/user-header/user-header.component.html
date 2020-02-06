@@ -1,0 +1,16 @@
+<div class="container" style="background-color: lightskyblue;">
+    <div class="row mt-3" >
+        <div class="col justify-content-end" > <img src="./assets/img/profile.png" alt="profile_pic" width="50px" height="50px"/>
+            <div class="text-success" style="float:right;">
+                <input type="search"  placeholder="Search here..." #srch/>
+                <input type="button" value="Search" (click)="searchCall(srch)"/>
+            </div>
+            <div class="row">
+                <div *ngIf="auth.isUserLoggedIn()" class="text-success" style="align-content: center;">
+                    <h3>Welcome {{auth.getUserDetails()}}</h3>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

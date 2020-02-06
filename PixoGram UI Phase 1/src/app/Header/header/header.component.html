@@ -1,0 +1,33 @@
+<header class="container" style="background-color: antiquewhite;">
+    <nav class="row mt-3">
+        <div class="col-3">
+           <a class="title-image">  <img src="./assets/img/logo.jpg" alt="logo" width="50px" height="50px"/>PixoGram<br><small><i>Tag line here.. </i></small></a>
+        </div>
+        <div class="col-6">
+            <ul class="nav nav-tabs nav-justified">
+                 <li class="nav-item">
+                     <a  class="nav-link btn-outline-secondary "type="btn"[routerLink]="['/single-media']">UploadMedia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-outline-secondary" type="btn"[routerLink]="['/gallery-component']">My-Media</a>
+                 </li>
+                 <li class="nav-item">
+                    <a  class="nav-link btn-outline-secondary" [routerLink]="['/follow']">Follow/Followers</a>
+                </li>
+                <li *ngIf="!auth.isUserLoggedIn()"  class="nav-item">
+                    <a class="nav-link btn-outline-secondary" [routerLink]="['/login']">LOGIN</a>
+                </li>
+                <li  *ngIf="auth.isUserLoggedIn()"class="nav-item">
+                    <a class="nav-link btn-outline-danger" [routerLink]="['/logout']">LOGOUT</a>
+                  </li>
+            </ul>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item ">
+                <a  class="nav-link btn-primary" type="btn btn-justified"[routerLink]="['/accountupdate']">Account</a></li>
+        </ul
+        >
+        </div>
+    </nav>
+</header>

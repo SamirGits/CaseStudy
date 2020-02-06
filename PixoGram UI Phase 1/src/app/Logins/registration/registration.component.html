@@ -1,0 +1,70 @@
+
+<div class="container mt-3">
+    <div class="row">
+        <aside class="col-sm-3 mr-10"  style="border: 1pt solid black;">
+            <div  class="mr-5 ml-5 mt-5">
+                
+            <!-- <div class="row"> -->
+                <div class="row" [routerLink]="['/login']">
+                    <button type="button"  class="btn btn-primary btn-block mb-3" >Login</button>   
+                </div> 
+                <div class="row"  [routerLink]="['/registration']">
+                    <button type="button" class="btn btn-primary btn-block mb-3">Registration</button>   
+                <!-- </div>              -->
+            </div>
+        </div>
+        </aside> 
+        <section class="col-sm-9 "  style="border: 1pt solid black;">
+            <div class="row justify-content-start mb-3">
+                <div class="h2">
+                    Registration
+                </div>
+            </div>
+            <form [formGroup]="myFormGroup"  (ngSubmit)="register()">
+                       <div class="form-group row ">
+                        <label for="usname" class="col-sm-3">User-Name</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control form-control-sm" formControlName="userName" placeholder="Enter User-Name">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="button" class="form-control form-control-sm btn btn-primary w-50" value="check">
+                        </div>
+                        <div class="col-sm-3">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3">Password</label>
+                        <div class="col-sm-3">
+                            <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Enter Password">
+                        </div>
+                        <div class="col-sm-6">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3">RepeatPassword</label>
+                        <div class="col-sm-3">
+                            <input type="password" class="form-control form-control-sm" formControlName="repeatPassword" placeholder="Repeat Password">
+                        </div>
+                        <div class="col-sm-6">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3">Email</label>
+                        <div class="col-sm-3">
+                            <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="Enter E-Mail">
+                        </div>
+                        <div class="col-sm-6">
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-3 col-sm-9">
+                            <input type="submit" class="form-control form-control-sm btn btn-primary w-25" value="Register">
+                        </div>
+                    </div>
+            </form> 
+        </section>
+    </div>
